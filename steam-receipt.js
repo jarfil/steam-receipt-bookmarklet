@@ -9,6 +9,8 @@ if ((location.href === 'https://store.steampowered.com/account/') || ((location.
             'description':jQuery(this).find('.transactionRowEvent .transactionRowTitle').text(),
             'descriptionSub':jQuery(this).find('.transactionRowEvent .itemSubtext').text()
         };
+		
+		console.log(jQuery(this).find('.transactionRowPrice').text() + " " + transaction.price + " " + transaction.currency);
 
         // Check if the transaction was a credit to the account
         if (jQuery(this).find('.transactionRowEvent').hasClass('walletcredit')){
